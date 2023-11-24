@@ -12,7 +12,7 @@ class FIFOTest extends AnyFlatSpec with ChiselScalatestTester {
         println(s"Staring:")
         println(s"\tfull=${dut.io.full.peek().litValue}, empty=${dut.io.empty.peek().litValue}")
         println(s"\twidx=${dut.io.widx.peek().litValue}, ridx=${dut.io.ridx.peek().litValue}")
-
+        
         println("testing write:")
         for(i <- 0 until 8){
             val datain = i * i + 1
